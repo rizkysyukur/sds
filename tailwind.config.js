@@ -16,6 +16,7 @@ module.exports = {
       height: {
         243: '243px',
         932: '932px',
+        500: '500px',
       },
       colors: {
         'sds-bg': '#201F1F',
@@ -24,7 +25,8 @@ module.exports = {
       },
       backgroundImage: {
         'section-2': "url('../src/assets/images/section-2.png')",
-        'section-4': "url('../src/assets/images/section-4.png')"
+        'section-4': "url('../src/assets/images/section-4.png')",
+        'career': "url('../src/assets/images/career.png')",
       }
     }
   },

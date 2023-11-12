@@ -23,7 +23,7 @@ export const routes: Routes = [
     component: ContactComponent,
   },
   {
-    path: 'out-service',
+    path: 'our-service',
     component: OutServiceComponent,
   },
   {
