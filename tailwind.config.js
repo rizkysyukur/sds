@@ -27,6 +27,7 @@ module.exports = {
         'section-2': "url('../src/assets/images/section-2.png')",
         'section-4': "url('../src/assets/images/section-4.png')",
         'career': "url('../src/assets/images/career.png')",
+        'service': "url('../src/assets/images/service-hero.png')",
       }
     }
   },
