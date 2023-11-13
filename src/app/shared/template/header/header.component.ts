@@ -10,4 +10,5 @@ export class HeaderComponent {
   toogleNavbar() {
     this.showMenu = !this.showMenu;
   }
+  
 }
