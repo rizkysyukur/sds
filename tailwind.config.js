@@ -23,6 +23,9 @@ module.exports = {
         'sds-orange': '#E79231',
         'sds-text': '#D8E1F2'
       },
+      textUnderlineOffset: {
+        20: '20px'
+      },
       backgroundImage: {
         'section-2': "url('../src/assets/images/section-2.png')",
         'section-4': "url('../src/assets/images/section-4.png')",
