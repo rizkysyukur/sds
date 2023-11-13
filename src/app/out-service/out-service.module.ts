@@ -1,12 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
+import { OutServiceComponent } from './out-service.component';
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
+  declarations: [OutServiceComponent],
+  imports: [CommonModule],
 })
-export class OutServiceModule { }
+export class OutServiceModule {}
