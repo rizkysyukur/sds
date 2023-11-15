@@ -10,7 +10,6 @@ import { AboutModule } from './about/about.module';
 import { CareerModule } from './career/career.module';
 import { OutServiceModule } from './out-service/out-service.module';
 import { ContactModule } from './contact/contact.module';
-
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -27,4 +26,4 @@ import { ContactModule } from './contact/contact.module';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
