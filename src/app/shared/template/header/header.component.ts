@@ -1,5 +1,5 @@
-import { Component} from '@angular/core';
-import { RouterLink } from '@angular/router';
+
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -11,5 +11,6 @@ export class HeaderComponent {
   toogleNavbar() {
     this.showMenu = !this.showMenu;
   }
-
+  
+  
 }
