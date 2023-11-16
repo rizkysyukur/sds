@@ -8,11 +8,12 @@ import { Component, HostListener, Inject } from '@angular/core';
 })
 export class AppComponent {
   title = 'sds_system';
-  currentUrl:string;
-  constructor(@Inject(DOCUMENT) private document: Document, public location: Location) { 
+  currentUrl: string;
+  constructor(@Inject(DOCUMENT) private document: Document, public location: Location) {
     this.currentUrl = this.location.path();
   }
-  
+  // ngOnInit() {
+  // }
   @HostListener('window:scroll', [])
   onWindowScroll() {
     if (document.body.scrollTop > 20 ||
@@ -24,5 +25,5 @@ export class AppComponent {
   }
   name = 'Angular';
 
-  
+
 }

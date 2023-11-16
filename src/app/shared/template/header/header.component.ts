@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
@@ -9,5 +10,9 @@ export class HeaderComponent {
   showMenu = false;
   toogleNavbar() {
     this.showMenu = !this.showMenu;
+  }
+  currenturl: string;
+  constructor(public location: Location) {
+    this.currenturl = this.location.path();
   }
 }
