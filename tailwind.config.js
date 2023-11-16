@@ -14,18 +14,25 @@ module.exports = {
         600: '600px',
         500: '500px',
         400: '400px',
+        450: '450px',
 
+      },
+      spacing: {
+        190: '190px',
+        75: '75px',
+        107: '107px'
       },
       width: {
         500: '500px',
         400: '400px',
-        366: '366px'
+        366: '366px',
+        344: '344px'
       },
       height: {
         243: '243px',
-        932: '932px',
+        950: '950px',
         500: '500px',
-
+        171: '171px'
       },
       colors: {
         'sds-bg': '#201F1F',
@@ -43,6 +50,11 @@ module.exports = {
         'career': "url('../src/assets/images/career.png')",
         'service': "url('../src/assets/images/service-hero.png')",
         'career-2': "url('../src/assets/images/career-2.png')",
+        'login': "url('../src/assets/images/elipse.png')",
+      },
+      boxShadow: {
+        'home-service': '0px 4px 30px 0px #BFBEBE',
+        'login': '-5px -8px 10px 0px #BFBEBE'
       }
     }
   },
