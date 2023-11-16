@@ -1,4 +1,4 @@
-import { DOCUMENT } from '@angular/common';
+import { DOCUMENT, Location } from '@angular/common';
 import { Component, HostListener, Inject } from '@angular/core';
 
 @Component({
@@ -8,8 +8,11 @@ import { Component, HostListener, Inject } from '@angular/core';
 })
 export class AppComponent {
   title = 'sds_system';
-  constructor(@Inject(DOCUMENT) private document: Document) { }
-
+  currentUrl:string;
+  constructor(@Inject(DOCUMENT) private document: Document, public location: Location) { 
+    this.currentUrl = this.location.path();
+  }
+  
   @HostListener('window:scroll', [])
   onWindowScroll() {
     if (document.body.scrollTop > 20 ||
@@ -20,4 +23,6 @@ export class AppComponent {
     }
   }
   name = 'Angular';
+
+  
 }

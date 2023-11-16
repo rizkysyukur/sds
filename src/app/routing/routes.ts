@@ -4,6 +4,7 @@ import { AboutComponent } from '../about/about.component';
 import { CareerComponent } from '../career/career.component';
 import { ContactComponent } from '../contact/contact.component';
 import { OutServiceComponent } from '../out-service/out-service.component';
+import { LoginComponent } from '../login/login.component';
 
 export const routes: Routes = [
   {
@@ -25,6 +26,10 @@ export const routes: Routes = [
   {
     path: 'our-service',
     component: OutServiceComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
   },
   {
     path: '',

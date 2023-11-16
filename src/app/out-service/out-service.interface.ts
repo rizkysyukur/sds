@@ -1,5 +1,5 @@
-export interface feedBack {
-    src: string;
+export interface Slide {
+    url: string;
     name: string;
-    comment: string
+    comment: string;
 }

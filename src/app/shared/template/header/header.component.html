@@ -1,14 +1,26 @@
-<div class="header md:bg-transparent bg-sds-bg" id="header">
+<div class="header md:bg-transparent bg-sds-bg" id="header" >
   <nav class="py-4 px-6 flex justify-between items-center">
     <div class="logo flex items-center gap-2">
-      <img src="../assets/icons/sds-logo.png" alt="Logo" class="h-8" />
-      <h1 class="text-white md:text-xl text-base font-bold">PT SARANA DWI SEJAHTERA</h1>
+        <img
+          src="../../../../assets/icons/sds-logo.png"
+          alt="Logo"
+          class="h-8 "
+        />
+      <h1 class="text-white md:text-xl text-base font-bold">
+        PT SARANA DWI SEJAHTERA
+      </h1>
     </div>
     <div class="menu space-x-20 text-sm font-medium md:flex hidden">
-      <a href="#" class="text-white hover:text-sds-orange hover:underline hover:underline-offset-20 transition-all" routerLink="/home" 
+      <a
+        href="#"
+        class="text-white hover:text-sds-orange hover:underline hover:underline-offset-20 transition-all"
+        routerLink="/home"
         >HOME</a
       >
-      <a href="#" class="text-white hover:text-sds-orange hover:underline hover:underline-offset-20 transition-all" routerLink="/about"
+      <a
+        href="#"
+        class="text-white hover:text-sds-orange hover:underline hover:underline-offset-20 transition-all"
+        routerLink="/about"
         >ABOUT</a
       >
       <a
@@ -17,23 +29,29 @@
         routerLink="/our-service"
         >OUR SERVICE</a
       >
-      <a href="#" class="text-white hover:text-sds-orange hover:underline hover:underline-offset-20 transition-all" routerLink="/contact"
+      <a
+        href="#"
+        class="text-white hover:text-sds-orange hover:underline hover:underline-offset-20 transition-all"
+        routerLink="/contact"
         >CONTACT</a
       >
-      <a href="#" class="text-white hover:text-sds-orange hover:underline hover:underline-offset-20 transition-all" routerLink="/career" 
+      <a
+        href="#"
+        class="text-white hover:text-sds-orange hover:underline hover:underline-offset-20 transition-all"
+        routerLink="/career"
         >CAREER</a
       >
     </div>
     <div class="login">
       <button
         class="border border-sds-orange bg-sds-bg text-sds-orange hover:bg-sds-orange hover:text-white font-bold py-2 px-4 rounded md:flex hidden"
-      >
+      routerLink="/login"
+        >
         Login
       </button>
       <button
         class="border border-sds-orange bg-sds-bg text-sds-orange hover:bg-sds-orange hover:text-white font-bold py-2 px-4 rounded md:hidden flex"
         (click)="toogleNavbar()"
-       
       >
         _
       </button>

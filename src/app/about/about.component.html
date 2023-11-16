@@ -1,53 +1,54 @@
 <main>
-    <section
-      class="bg-career bg-center bg-no-repeat bg-cover flex items-start justify-center flex-col h-500"
-    >
-      <div class="ml-10">
-        <h1
-          class="text-3xl text-sds-orange font-bold underline underline-offset-2"
-        >
-          OUR COMPANY
-        </h1>
-        <p class="text-white">
-          Get Closer with US
-          <span class="font-bold text-2xl text-sds-orange">...</span>
-        </p>
+  <section
+    class="bg-career bg-center bg-no-repeat bg-cover flex items-start justify-center flex-col h-500"
+  >
+    <div class="ml-10">
+      <h1
+        class="text-3xl text-sds-orange font-bold underline underline-offset-2"
+      >
+        OUR COMPANY
+      </h1>
+      <p class="text-white">
+        Get Closer with US
+        <span class="font-bold text-2xl text-sds-orange">...</span>
+      </p>
+    </div>
+  </section>
+
+  <section class="md:py-20 p-5">
+    <div class="md:grid-cols-12 grid-cols-6 grid">
+      <div class="md:col-start-2 col-start-1 md:col-span-4 col-span-6">
+        <img
+          src="../../assets/images/about-section2.png"
+          alt="about section 2"
+        />
       </div>
-    </section>
-  
-    <section class="md:py-20 p-5">
-      <div class="md:grid-cols-12 grid-cols-6 grid">
-        <div class="md:col-start-2 col-start-1 md:col-span-4 col-span-6">
-          <img
-            src="../../assets/images/about-section2.png"
-            alt="about section 2"
-          />
+      <div
+        class="md:col-start-7 md:col-span-4 col-start-1 col-span-6 mt-5 md:mt-0"
+      >
+        <div class="flex gap-3 flex-col">
+          <h3 class="text-2xl font-bold text-sds-orange">
+            PT Sarana Dwi Sejahtera
+          </h3>
+          <p class="">
+            PT Sarana Dwi Sejahtera Based on Notary Deed of Establishment Elly
+            Rustam, SH No. 017 on November 17, 2009 as well has obtained
+            approval from the minister of Justice and Human Rights of the
+            Republic of Indonesia Number: AHU-10011.AH.01.02 Year 2010. Dated 24
+            February 2010
+          </p>
+          <p>
+            Based on the legal basis and reality that the existing human
+            resources are still needed increased to support economic growth,
+            then based on these problems PT Sarana Dwi Sejahtera willing to
+            participate in supporting development economic growth, where it is
+            realized in the form of establishing a company called PT Sarana Dwi
+            Sejahtera engaged in management consulting.
+          </p>
         </div>
-        <div
-          class="md:col-start-7 md:col-span-4 col-start-1 col-span-6 mt-5 md:mt-0"
-        >
-          <div class="flex gap-3 flex-col">
-            <h3 class="text-2xl font-bold text-sds-orange">
-              PT Sarana Dwi Sejahtera
-            </h3>
-            <p class="">
-              PT Sarana Dwi Sejahtera Based on Notary Deed of Establishment Elly
-              Rustam, SH No. 017 on November 17, 2009 as well has obtained
-              approval from the minister of Justice and Human Rights of the
-              Republic of Indonesia Number: AHU-10011.AH.01.02 Year 2010. Dated 24
-              February 2010
-            </p>
-            <p>
-              Based on the legal basis and reality that the existing human
-              resources are still needed increased to support economic growth,
-              then based on these problems PT Sarana Dwi Sejahtera willing to
-              participate in supporting development economic growth, where it is
-              realized in the form of establishing a company called PT Sarana Dwi
-              Sejahtera engaged in management consulting.
-            </p>
-          </div>
-  
-          <div class="flex flex-col gap-3 mt-3">
+
+        <div class="flex flex-col gap-3 mt-3">
+          <button (click)="toggleAccordion()">
             <div
               class="flex justify-between px-4 py-2 bg-gray-200 hover:bg-sds-orange transition-all w-full rounded-sm"
             >
@@ -59,11 +60,15 @@
                 height="18"
               />
             </div>
+          </button>
+          <div [ngClass]="{ hidden: !showAccordion, flex: showAccordion }">
             <p>
               Provide other options for users of the services offered PT Sarana
-              Dwi Sejahtera is expected to provide better convenience and comfort
-              for service users.
+              Dwi Sejahtera is expected to provide better convenience and
+              comfort for service users.
             </p>
+          </div>
+          <button (click)="toggleAccordion2()">
             <div
               class="flex justify-between px-4 py-2 bg-gray-200 hover:bg-sds-orange transition-all w-full rounded-sm"
             >
@@ -75,81 +80,128 @@
                 height="18"
               />
             </div>
+          </button>
+
+          <div [ngClass]="{ hidden: !showAccordion2, flex: showAccordion2 }">
+            <p>
+              Provide other options for users of the services offered PT Sarana
+              Dwi Sejahtera is expected to provide better convenience and
+              comfort for service users.
+            </p>
           </div>
         </div>
       </div>
-    </section>
-  
-    <section class="md:p-10 p-4">
-      <div class="text-center">
-        <h2 class="font-bold text-3xl">
-          Our <span class="text-sds-orange underline underline-offset-8"> Principle </span>
-          Working
-        </h2>
-        <p class="mt-3">We Provide Client with the best Professional Management Services</p>
+    </div>
+  </section>
+
+  <section class="md:p-10 p-4 md:mb-32">
+    <div class="text-center">
+      <h2 class="font-bold text-3xl">
+        Our
+        <span class="text-sds-orange underline underline-offset-8">
+          Principle
+        </span>
+        Working
+      </h2>
+      <p class="mt-3">
+        We Provide Client with the best Professional Management Services
+      </p>
+    </div>
+    <div
+      class="flex flex-col md:flex-row md:gap-10 gap-20 justify-between items-center md:mt-36 mt-20"
+    >
+      <div
+        class="p-2 w-fit h-fit rounded-full border border-sds-secondary md:block hidden"
+      >
+        <img
+          src="../../assets/icons/arrow-left.svg"
+          alt="arrow-left"
+          width="28"
+          height="28"
+        />
       </div>
-      <div class="flex flex-col md:flex-row md:gap-10 gap-20 justify-between items-center md:mt-36 mt-20">
-  
-        <div class="p-2 w-fit h-fit rounded-full border border-sds-secondary md:block hidden">
-          <img src="../../assets/icons/arrow-left.svg" alt="arrow-left" width="28" height="28">
-        </div>
-  
+
+      <div
+        class="relative bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] shadow-orange-400/40 p-7 rounded-xl group"
+      >
         <div
-          class="relative bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] shadow-orange-400/40 p-7 rounded-xl group"
+          class="p-3 rounded-xl bg-sds-bg group-hover:bg-sds-orange w-fit absolute -top-12"
         >
-          <div class="p-3 rounded-xl bg-sds-bg group-hover:bg-sds-orange w-fit absolute -top-12">
-            <img src="../../assets/icons/handmade.svg" alt="Handmade" />
-          </div>
-          <p class="font-bold">Care</p>
-          <ul class="list-disc ml-5">
-            <li>passion for helping each others</li>
-            <li>Always Consider the impact of our Actions on others</li>
-            <li>Always Open and Happy to work with others</li>
-          </ul>
+          <img src="../../assets/icons/handmade.svg" alt="Handmade" />
         </div>
-  
+        <p class="font-bold">Care</p>
+        <ul class="list-disc ml-5">
+          <li>passion for helping each others</li>
+          <li>Always Consider the impact of our Actions on others</li>
+          <li>Always Open and Happy to work with others</li>
+        </ul>
+      </div>
+
+      <div
+        class="relative shadow-[0_8px_30px_rgb(0,0,0,0.12)] shadow-orange-400/40 p-7 rounded-xl group"
+      >
         <div
-          class="relative shadow-[0_8px_30px_rgb(0,0,0,0.12)] shadow-orange-400/40 p-7 rounded-xl group"
+          class="p-3 rounded-xl bg-sds-bg w-fit absolute -top-12 group-hover:bg-sds-orange"
         >
-          <div class="p-3 rounded-xl bg-sds-bg w-fit absolute -top-12 group-hover:bg-sds-orange">
-            <img src="../../assets/icons/Facebook Like.svg" alt="Like" />
-          </div>
-          <p class="font-bold">Service Oriented</p>
-          <ul class="list-disc ml-5">
-            <li>Empathize at Work</li>
-            <li>Focus on Client Needs</li>
-            <li>Have a Big Goals other than Personal Gioals</li>
-          </ul>
+          <img src="../../assets/icons/Facebook Like.svg" alt="Like" />
         </div>
-  
+        <p class="font-bold">Service Oriented</p>
+        <ul class="list-disc ml-5">
+          <li>Empathize at Work</li>
+          <li>Focus on Client Needs</li>
+          <li>Have a Big Goals other than Personal Gioals</li>
+        </ul>
+      </div>
+
+      <div
+        class="relative shadow-[0_8px_30px_rgb(0,0,0,0.12)] shadow-orange-400/40 p-7 rounded-xl group md:w-fit w-full"
+      >
         <div
-          class="relative shadow-[0_8px_30px_rgb(0,0,0,0.12)] shadow-orange-400/40 p-7 rounded-xl group md:w-fit w-full"
+          class="p-3 rounded-xl bg-sds-bg w-fit absolute -top-12 group-hover:bg-sds-orange"
         >
-          <div class="p-3 rounded-xl bg-sds-bg w-fit absolute -top-12 group-hover:bg-sds-orange">
-            <img src="../../assets/icons/Light On.svg" alt="light" />
-          </div>
-          <p class="font-bold">Innovative</p>
-          <ul class="list-disc ml-5">
-            <li>Motivated on the learning</li>
-            <li>Taking the time to learn</li>
-            <li>Rewarding failure equals success</li>
-          </ul>
+          <img src="../../assets/icons/Light On.svg" alt="light" />
         </div>
-  
-        <div class="p-2 w-fit h-fit rounded-full border border-sds-secondary md:block hidden">
-          <img src="../../assets/icons/arrow-right.svg" alt="arrow-right.svg" width="28" height="28">
+        <p class="font-bold">Innovative</p>
+        <ul class="list-disc ml-5">
+          <li>Motivated on the learning</li>
+          <li>Taking the time to learn</li>
+          <li>Rewarding failure equals success</li>
+        </ul>
+      </div>
+
+      <div
+        class="p-2 w-fit h-fit rounded-full border border-sds-secondary md:block hidden"
+      >
+        <img
+          src="../../assets/icons/arrow-right.svg"
+          alt="arrow-right.svg"
+          width="28"
+          height="28"
+        />
+      </div>
+
+      <div class="md:hidden flex gap-2">
+        <div
+          class="p-2 w-fit h-fit rounded-full border border-sds-secondary md:block hidden"
+        >
+          <img
+            src="../../assets/icons/arrow-left.svg"
+            alt="arrow-left.svg"
+            width="28"
+            height="28"
+          />
         </div>
-  
-        <div class="md:hidden flex gap-2">
-          <div class="p-2 w-fit h-fit rounded-full border border-sds-secondary md:block hidden">
-            <img src="../../assets/icons/arrow-left.svg" alt="arrow-left.svg" width="28" height="28">
-          </div>
-          <div class="p-2 w-fit h-fit rounded-full border border-sds-secondary md:block hidden">
-            <img src="../../assets/icons/arrow-right.svg" alt="arrow-right.svg" width="28" height="28">
-          </div>
-  
+        <div
+          class="p-2 w-fit h-fit rounded-full border border-sds-secondary md:block hidden"
+        >
+          <img
+            src="../../assets/icons/arrow-right.svg"
+            alt="arrow-right.svg"
+            width="28"
+            height="28"
+          />
         </div>
       </div>
-    </section>
-  </main>
-  
+    </div>
+  </section>
+</main>
