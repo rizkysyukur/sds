@@ -10,5 +10,11 @@ export class FooterComponent {
   currenturl: string;
   constructor(public location: Location) {
     this.currenturl = this.location.path();
+    if(this.currenturl !== '/login'){
+      console.log('navbar tidak ada')
+    }
+  }
+  ngOnInit() {
+    this.currenturl = this.location.path();
   }
 }

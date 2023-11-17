@@ -9,7 +9,7 @@ module.exports = {
         custom: ['kanit', 'sans'],
       },
       maxWidth: {
-        80:'80px',
+        80: '80px',
         235: '235px',
         600: '600px',
         500: '500px',
@@ -55,6 +55,32 @@ module.exports = {
       boxShadow: {
         'home-service': '0px 4px 30px 0px #BFBEBE',
         'login': '-5px -8px 10px 0px #BFBEBE'
+      },
+      transformOrigin: {
+        'top-left-1/3-3/4': '33% 75%',
+      },
+      animation: {
+        'infinite-scroll': 'infinite-scroll 2s linear',
+        'accordion': 'accordion 0.5s linear',
+        'accordion2': 'accordion2 0.5s linear',
+      },
+      keyframes: {
+        'infinite-scroll': {
+          from: { transform: 'translateX(1.5rem)' },
+          to: { transform: 'translateX(-10%)' },
+        },
+        'accordion': {
+          from: { transform: 'translateX(0rem)' },
+          to: { transform: 'translateX(-100px)'},
+        },
+        'accordion2': {
+          from: { opacity: '1' },
+          to: { opacity: '0' },
+        },
+      },
+      transitionProperty: {
+        'height': 'height',
+        'spacing': 'margin, padding',
       }
     }
   },

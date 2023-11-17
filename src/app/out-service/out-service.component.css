@@ -1,0 +1,16 @@
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-container {
+  display: flex;
+  transition: transform 0.5s ease; /* Animasi transisi untuk mengubah transformasi */
+  z-index: -10;
+}
+
+.slide {
+  flex: 0 0 auto;
+  width: calc(100% / 4); /* Sesuaikan dengan jumlah displayedSlidesCount */
+  /* Gaya lainnya seperti ukuran, margin, dll. */
+}
