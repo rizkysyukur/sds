@@ -137,24 +137,29 @@
         <div class="col-start-2 col-span-1">
           <button
             (click)="prev()"
-            class="p-2 w-fit h-fit rounded-full border border-sds-secondary md:block hidden"
+            class="p-2 rounded-full group hover:bg-sds-orange shadow-md"
           >
-            <img
-              src="../../assets/icons/arrow-left.svg"
-              alt="arrow-left"
-              width="28"
-              height="28"
-            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                class="fill-sds-secondary group-hover:fill-white"
+                d="M17.51 3.87L15.73 2.1L5.84 12l9.9 9.9l1.77-1.77L9.38 12l8.13-8.13z"
+              />
+            </svg>
           </button>
         </div>
 
         <div class="col-start-3 col-span-8 overflow-hidden">
           <div
-            class="flex transition-all gap-6 py-20 px-5 cards-wrapper "
+            class="flex transition-all gap-6 py-20 px-5 cards-wrapper"
             #cardsWrapper
           >
             <div
-              class=" bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] shadow-orange-400/40 relative p-4 rounded-xl group "
+              class="bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] shadow-orange-400/40 relative p-4 rounded-xl group"
               *ngFor="let slides of slides"
             >
               <div
@@ -175,14 +180,21 @@
         <div class="col-start-12 col-span-1">
           <button
             (click)="next()"
-            class="p-2 w-fit h-fit rounded-full border border-sds-secondary md:block hidden items-end"
+            class="p-2 rounded-full group hover:bg-sds-orange shadow-md"
           >
-            <img
-              src="../../assets/icons/arrow-right.svg"
-              alt="arrow-right.svg"
-              width="28"
-              height="28"
-            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <g transform="rotate(180 12 12)">
+                <path
+                class="fill-sds-secondary group-hover:fill-white"
+                  d="M17.51 3.87L15.73 2.1L5.84 12l9.9 9.9l1.77-1.77L9.38 12l8.13-8.13z"
+                />
+              </g>
+            </svg>
           </button>
         </div>
       </div>
