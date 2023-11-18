@@ -122,12 +122,12 @@
       </div>
     </div>
     <div
-      class="md:col-start-5 overflow-hidden md:col-span-9 col-span-6 flex gap-4 p-10 " 
+      class="md:col-start-5 overflow-hidden md:col-span-9 col-span-6 flex gap-4 p-10 display-area" 
     >
-      <div  class="flex items-center transition-all gap-4">
+      <div class="flex items-center transition-all gap-4 cards-wrapper" #cardsWrapper>
         <div
-          class="relative w-full bg-sds-secondary rounded-md p-4"
-          *ngFor="let slide of visibleSlides" 
+          class="relative w-full bg-sds-secondary rounded-md p-4 card"
+          *ngFor="let slide of slides"
         >
           <img src="../../assets/icons/quote.svg" alt="quote" />
           <p class="text-left mt-4 w-344">

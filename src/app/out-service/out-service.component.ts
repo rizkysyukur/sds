@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 interface Slide {
   url: string;
   name: string;
@@ -35,31 +35,51 @@ export class OutServiceComponent {
       name: 'Sri Mulyani Indrawati, S.E., M.Sc., Ph.D. 4',
       comment: 'Lorem ipsum dolor sit amet consectetur. Nulla pulvinar pellentesque amet praesent sit malesuada pellentesque nisi.'
     },
+    {
+      url: '../../assets/images/out-service-feedback.png',
+      name: 'Sri Mulyani Indrawati, S.E., M.Sc., Ph.D. 5',
+      comment: 'Lorem ipsum dolor sit amet consectetur. Nulla pulvinar pellentesque amet praesent sit malesuada pellentesque nisi.'
+    },
+    {
+      url: '../../assets/images/out-service-feedback.png',
+      name: 'Sri Mulyani Indrawati, S.E., M.Sc., Ph.D. 6',
+      comment: 'Lorem ipsum dolor sit amet consectetur. Nulla pulvinar pellentesque amet praesent sit malesuada pellentesque nisi.'
+    },
   ]
-  visibleSlides: Slide[] = []; // Inisialisasi array kosong
+  @ViewChild('cardsWrapper') cardsWrapper!: ElementRef; // ViewChild to reference the cards wrapper
 
-  startIndex = 0; // Indeks untuk mulai menampilkan slide
-  updateChange = false;
+  visibleSlides: Slide[] = [];
+  startIndex = 0;
   displayedSlidesCount = 3;
-  remainingSlides: any;
+  slideWidth = 300;
+  totalSlides = this.slides.length;
 
-  updateVisibleSlides() {
-    this.visibleSlides = this.slides.slice(this.startIndex, this.startIndex + this.displayedSlidesCount);
+  constructor() {
+    // Inisialisasi data, jika ada
   }
 
-  ngOnInit() {
-    this.updateVisibleSlides();
-    
+  ngAfterViewInit() {
+    this.moveCarousel();
+  }
+
+  moveCarousel() {
+    if (this.cardsWrapper) {
+      const wrapperElement = this.cardsWrapper.nativeElement as HTMLElement;
+      wrapperElement.style.transform = `translateX(-${this.startIndex * this.slideWidth}px)`;
+    }
   }
 
   next() {
-    this.startIndex = (this.startIndex + 1) % this.slides.length;
-    this.updateVisibleSlides();
+    if (this.startIndex < this.slides.length - 1) {
+      this.startIndex++;
+      this.moveCarousel();
+    }
   }
 
   prev() {
-    this.startIndex = (this.startIndex - 1 + this.slides.length) % this.slides.length;
-    this.updateVisibleSlides();
+    if (this.startIndex > 0) {
+      this.startIndex--;
+      this.moveCarousel();
+    }
   }
-
 }
