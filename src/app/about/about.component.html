@@ -15,7 +15,7 @@
     </div>
   </section>
 
-  <section class="md:py-20 p-5 ">
+  <section class="md:py-20 p-5">
     <div class="md:grid-cols-12 grid-cols-6 grid">
       <div class="md:col-start-2 col-start-1 md:col-span-4 col-span-6">
         <img
@@ -51,8 +51,10 @@
           <button (click)="toggleAccordion()">
             <div
               class="flex justify-between px-4 py-2 bg-gray-200 w-full rounded-sm"
-              [ngClass] = "{'bg-sds-orange': showAccordion, 'bg-gray-200': !showAccordion }"
-
+              [ngClass]="{
+                'bg-sds-orange': showAccordion,
+                'bg-gray-200': !showAccordion
+              }"
             >
               <p>Purpose & Objectives</p>
               <img
@@ -60,11 +62,20 @@
                 alt="mini-arrow"
                 width="18"
                 height="18"
-                [ngClass] = "{'rotate-0': !showAccordion, 'rotate-180': showAccordion, 'transition-all':showAccordion}"
+                [ngClass]="{
+                  'rotate-0': !showAccordion,
+                  'rotate-180': showAccordion,
+                  'transition-all': showAccordion
+                }"
               />
             </div>
           </button>
-          <div [ngClass] = "{'block transition-[1000px] duration-100': showAccordion, 'hidden transition-[0] duration-100': !showAccordion}">
+          <div
+            [ngClass]="{
+              'block transition-[1000px] duration-100': showAccordion,
+              'hidden transition-[0] duration-100': !showAccordion
+            }"
+          >
             <p>
               Provide other options for users of the services offered PT Sarana
               Dwi Sejahtera is expected to provide better convenience and
@@ -73,8 +84,11 @@
           </div>
           <button (click)="toggleAccordion2()">
             <div
-              class="flex justify-between px-4 py-2 bg-gray-200  w-full rounded-sm"
-              [ngClass] = "{'bg-sds-orange': showAccordion2, 'bg-gray-200': !showAccordion2 }"
+              class="flex justify-between px-4 py-2 bg-gray-200 w-full rounded-sm"
+              [ngClass]="{
+                'bg-sds-orange': showAccordion2,
+                'bg-gray-200': !showAccordion2
+              }"
             >
               <p>Motto</p>
               <img
@@ -82,12 +96,17 @@
                 alt="mini-arrow"
                 width="18"
                 height="18"
-                [ngClass] = "{'rotate-0 transition-all': !showAccordion2, 'rotate-180 transition-all': showAccordion2,}"
+                [ngClass]="{'rotate-0 transition-all': !showAccordion2, 'rotate-180 transition-all': showAccordion2,}"
               />
             </div>
           </button>
 
-          <div [ngClass] = "{'block transition-[1000px] duration-100': showAccordion2, 'hidden transition-[0] duration-100': !showAccordion2}">
+          <div
+            [ngClass]="{
+              'block transition-[1000px] duration-100': showAccordion2,
+              'hidden transition-[0] duration-100': !showAccordion2
+            }"
+          >
             <p>
               Provide other options for users of the services offered PT Sarana
               Dwi Sejahtera is expected to provide better convenience and
@@ -99,112 +118,72 @@
     </div>
   </section>
 
-  <section class="md:p-10 p-4 md:mb-32">
-    <div class="text-center">
-      <h2 class="font-bold text-3xl">
-        Our
-        <span class="text-sds-orange underline underline-offset-8">
-          Principle
-        </span>
-        Working
-      </h2>
-      <p class="mt-3">
-        We Provide Client with the best Professional Management Services
-      </p>
-    </div>
-    <div
-      class="flex flex-col md:flex-row md:gap-10 gap-20 justify-between items-center md:mt-36 mt-20"
-    >
-      <div
-        class="p-2 w-fit h-fit rounded-full border border-sds-secondary md:block hidden"
-      >
-        <img
-          src="../../assets/icons/arrow-left.svg"
-          alt="arrow-left"
-          width="28"
-          height="28"
-        />
+  <section class="">
+    <div class="grid grid-cols-12 items-center">
+      <div class="col-start-1 col-span-12 text-center">
+        <h2 class="font-bold text-3xl">
+          Our
+          <span class="text-sds-orange underline underline-offset-8">
+            Principle
+          </span>
+          Working
+        </h2>
+        <p class="mt-3">
+          We Provide Client with the best Professional Management Services
+        </p>
       </div>
 
-      <div
-        class="relative bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] shadow-orange-400/40 p-7 rounded-xl group"
-      >
-        <div
-          class="p-3 rounded-xl bg-sds-bg group-hover:bg-sds-orange w-fit absolute -top-12"
-        >
-          <img src="../../assets/icons/handmade.svg" alt="Handmade" />
+      <div class="items-center grid grid-cols-12 col-start-1 col-span-12 mt-10">
+        <div class="col-start-2 col-span-1">
+          <button
+            (click)="prev()"
+            class="p-2 w-fit h-fit rounded-full border border-sds-secondary md:block hidden"
+          >
+            <img
+              src="../../assets/icons/arrow-left.svg"
+              alt="arrow-left"
+              width="28"
+              height="28"
+            />
+          </button>
         </div>
-        <p class="font-bold">Care</p>
-        <ul class="list-disc ml-5">
-          <li>passion for helping each others</li>
-          <li>Always Consider the impact of our Actions on others</li>
-          <li>Always Open and Happy to work with others</li>
-        </ul>
-      </div>
 
-      <div
-        class="relative shadow-[0_8px_30px_rgb(0,0,0,0.12)] shadow-orange-400/40 p-7 rounded-xl group"
-      >
-        <div
-          class="p-3 rounded-xl bg-sds-bg w-fit absolute -top-12 group-hover:bg-sds-orange"
-        >
-          <img src="../../assets/icons/Facebook Like.svg" alt="Like" />
+        <div class="col-start-3 col-span-8 overflow-hidden">
+          <div
+            class="flex transition-all gap-6 py-20 px-5 cards-wrapper "
+            #cardsWrapper
+          >
+            <div
+              class=" bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] shadow-orange-400/40 relative p-4 rounded-xl group "
+              *ngFor="let slides of slides"
+            >
+              <div
+                class="p-3 rounded-xl bg-sds-bg group-hover:bg-sds-orange w-fit absolute -top-10"
+              >
+                <img [src]="slides.src" alt="Handmade" />
+              </div>
+              <p class="font-bold mt-5">{{ slides.title }}</p>
+              <ul class="list-disc ml-5">
+                <li *ngFor="let listItem of splitter(slides.list)">
+                  {{ listItem }}
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <p class="font-bold">Service Oriented</p>
-        <ul class="list-disc ml-5">
-          <li>Empathize at Work</li>
-          <li>Focus on Client Needs</li>
-          <li>Have a Big Goals other than Personal Gioals</li>
-        </ul>
-      </div>
 
-      <div
-        class="relative shadow-[0_8px_30px_rgb(0,0,0,0.12)] shadow-orange-400/40 p-7 rounded-xl group md:w-fit w-full"
-      >
-        <div
-          class="p-3 rounded-xl bg-sds-bg w-fit absolute -top-12 group-hover:bg-sds-orange"
-        >
-          <img src="../../assets/icons/Light On.svg" alt="light" />
-        </div>
-        <p class="font-bold">Innovative</p>
-        <ul class="list-disc ml-5">
-          <li>Motivated on the learning</li>
-          <li>Taking the time to learn</li>
-          <li>Rewarding failure equals success</li>
-        </ul>
-      </div>
-
-      <div
-        class="p-2 w-fit h-fit rounded-full border border-sds-secondary md:block hidden"
-      >
-        <img
-          src="../../assets/icons/arrow-right.svg"
-          alt="arrow-right.svg"
-          width="28"
-          height="28"
-        />
-      </div>
-
-      <div class="md:hidden flex gap-2">
-        <div
-          class="p-2 w-fit h-fit rounded-full border border-sds-secondary md:block hidden"
-        >
-          <img
-            src="../../assets/icons/arrow-left.svg"
-            alt="arrow-left.svg"
-            width="28"
-            height="28"
-          />
-        </div>
-        <div
-          class="p-2 w-fit h-fit rounded-full border border-sds-secondary md:block hidden"
-        >
-          <img
-            src="../../assets/icons/arrow-right.svg"
-            alt="arrow-right.svg"
-            width="28"
-            height="28"
-          />
+        <div class="col-start-12 col-span-1">
+          <button
+            (click)="next()"
+            class="p-2 w-fit h-fit rounded-full border border-sds-secondary md:block hidden items-end"
+          >
+            <img
+              src="../../assets/icons/arrow-right.svg"
+              alt="arrow-right.svg"
+              width="28"
+              height="28"
+            />
+          </button>
         </div>
       </div>
     </div>

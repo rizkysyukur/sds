@@ -2,18 +2,3 @@
   /* display: flex; */
   transition: ease 0.5s;
 }
-/*
-.display-area {
-  width: 880px;
-  overflow-x: hidden;
-  margin: auto;
-}
-
-.card {
-  height: 200px;
-  background-color: rgba(0, 0, 0, 0.4);
-  color: white;
-  font-size: 12px;
-  margin: 5px;
-  flex: 200px 0 0;
-} */

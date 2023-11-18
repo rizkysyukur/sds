@@ -50,10 +50,7 @@ export class OutServiceComponent {
 
   visibleSlides: Slide[] = [];
   startIndex = 0;
-  displayedSlidesCount = 3;
   slideWidth = 300;
-  totalSlides = this.slides.length;
-
   constructor() {
     // Inisialisasi data, jika ada
   }
@@ -72,14 +69,18 @@ export class OutServiceComponent {
   next() {
     if (this.startIndex < this.slides.length - 1) {
       this.startIndex++;
-      this.moveCarousel();
+    } else {
+      this.startIndex = -1;
     }
+    this.moveCarousel();
   }
 
   prev() {
     if (this.startIndex > 0) {
       this.startIndex--;
-      this.moveCarousel();
+    } else {
+      this.startIndex = -1;
     }
+    this.moveCarousel();
   }
 }
